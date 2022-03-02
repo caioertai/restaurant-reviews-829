@@ -1,24 +1,25 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<!-- New feature -->
+<!-- Users want to see the top restaurants -->
+<!--  -->
+      GET     /restaurants/:restaurant_id/reviews/new
+      POST    /restaurants/:restaurant_id/reviews
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+      DELETE  /review/:id
 
-* Configuration
+<!-- Collection -->
+    restaurants  GET     /restaurants           restaurants#index
+                 POST    /restaurants           restaurants#create
+ new_restaurant  GET     /restaurants/new       restaurants#new
 
-* Database creation
+top_restaurants  GET     /restaurants/top       restaurants#top
 
-* Database initialization
+<!-- Member routes -->
+edit_restaurant  GET     /restaurants/:id/edit  restaurants#edit
+     restaurant  GET     /restaurants/:id       restaurants#show
+                 PATCH   /restaurants/:id       restaurants#update
+                 DELETE  /restaurants/:id       restaurants#destroy
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ restaurant_chef GET     /restaurants/:id/chef  restaurants#chef

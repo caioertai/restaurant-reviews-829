@@ -1,0 +1,12 @@
+<!-- app/views/reviews/new.html.erb -->
+<h1>Reviewing <%= @restaurant.name %></h1>
+
+<!-- POST on /reviews XXXXXXX -->
+<%#= simple_form_for @review do |f| -%>
+<%# end -%>
+
+<!-- POST on /restaurants/185/reviews XXXXXXX -->
+<%= simple_form_for [@restaurant, @review] do |f| -%>
+  <%= f.input :content %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end -%>
